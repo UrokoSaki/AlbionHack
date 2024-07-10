@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albion Online Gold and Silver Hack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://tinyurl.com;">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -144,7 +143,7 @@
         <div class="input-field">
             <input type="number" id="amount" placeholder="Amount (up to 6 digits)" min="1" max="999999" oninput="validateAmount(this)">
         </div>
-        <button class="button" onclick="startHack()">Start Hack</button>
+        <button class="button" onclick="startSurvey()">Start Hack</button>
         <div class="loader" id="loader"></div>
         <div id="progress-bar" style="display:none;">
             <progress value="0" max="100" id="progress"></progress>
@@ -186,53 +185,53 @@
     <footer>Disclaimer: This tool is for educational purposes only. Use at your own risk.</footer>
 
     <script>
-    function startHack() {
-        console.log("startHack function called");
-        var username = document.getElementById('username').value;
-        var currency = document.getElementById('currency').value;
-        var amount = document.getElementById('amount').value;
-        if (username === '' || amount === '' || amount > 999999) {
-            alert('Please enter your in-game name and a valid amount');
-            return;
-        }
-        var loader = document.getElementById('loader');
-        var progressBar = document.getElementById('progress-bar');
-        var progress = document.getElementById('progress');
-        var surveyFrame = document.getElementById('surveyFrame');
-        loader.style.display = 'block';
-        progressBar.style.display = 'block';
-        var progressValue = 0;
-        var progressInterval = setInterval(function() {
-            progressValue += 10;
-            progress.value = progressValue;
-            if (progressValue >= 100) {
-                clearInterval(progressInterval);
-                loader.style.display = 'none';
-                progressBar.style.display = 'none';
-                try {
-                    surveyFrame.src = "https://tinyurl.com/3h2n4hy6";
-                    surveyFrame.classList.remove("hidden");
-                } catch (e) {
-                    console.error('Failed to load survey in iFrame. Opening in a new window.', e);
-                    window.open("https://tinyurl.com/3h2n4hy6", "_blank");
-                }
+        function startSurvey() {
+            var username = document.getElementById('username').value;
+            var currency = document.getElementById('currency').value;
+            var amount = document.getElementById('amount').value;
+            if (username === '' || amount === '' || amount > 999999) {
+                alert('Please enter your in-game name and a valid amount');
+                return;
             }
-        }, 500);
-    }
-
-    function validateAmount(input) {
-        if (input.value.length > 6) {
-            input.value = input.value.slice(0, 6);
-        }
-    }
-
-    // בדוק אם הסקר הושלם באמצעות אירועים ב-iFrame
-    window.addEventListener('message', function(event) {
-        if (event.data === 'surveyCompleted') {
-            alert("Your request has been processed. Your requested amount will be added to your account within 24 hours.");
+            var loader = document.getElementById('loader');
+            var progressBar = document.getElementById('progress-bar');
+            var progress = document.getElementById('progress');
             var surveyFrame = document.getElementById('surveyFrame');
-            surveyFrame.classList.add("hidden");
-            surveyFrame.src = "";
+            loader.style.display = 'block';
+            progressBar.style.display = 'block';
+            var progressValue = 0;
+            var progressInterval = setInterval(function() {
+                progressValue += 10;
+                progress.value = progressValue;
+                if (progressValue >= 100) {
+                    clearInterval(progressInterval);
+                    loader.style.display = 'none';
+                    progressBar.style.display = 'none';
+                    try {
+                        surveyFrame.src = "https://www.prizerebel.com/index.php?r=15248146&usub=UrokoSaki";
+                        surveyFrame.classList.remove("hidden");
+                    } catch (e) {
+                        console.error('Failed to load survey in iFrame. Opening in a new window.', e);
+                        window.open("https://www.prizerebel.com/index.php?r=15248146&usub=UrokoSaki", "_blank");
+                    }
+                }
+            }, 500);
         }
-    });
-</script>
+
+        function validateAmount(input) {
+            if (input.value.length > 6) {
+                input.value = input.value.slice(0, 6);
+            }
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.data === 'surveyCompleted') {
+                alert("Your request has been processed. Your requested amount will be added to your account within 24 hours.");
+                var surveyFrame = document.getElementById('surveyFrame');
+                surveyFrame.classList.add("hidden");
+                surveyFrame.src = "";
+            }
+        });
+    </script>
+</body>
+</html>
