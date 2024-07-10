@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albion Online Gold and Silver Hack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('hero-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+        nav {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin-top: 80px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .input-field {
+            margin: 15px 0;
+        }
+        input, select {
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            margin: 5px 0;
+        }
+        .button {
+            background: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .button:hover {
+            background: #218838;
+        }
+        .loader {
+            display: none;
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+        }
+        .feature i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .testimonials {
+            margin: 20px 0;
+        }
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="container" id="home">
+        <h1><i class="fas fa-coins"></i> Albion Online Gold and Silver Hack</h1>
+        <p>Get the resources you need to succeed in Albion Online! Enter your in-game name, choose your currency, and specify the amount you want.</p>
+        
+        <div class="input-field">
+            <input type="text" id="username" placeholder="In-game name">
+        </div>
+        <div class="input-field">
+            <select id="currency">
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+            </select>
+        </div>
+        <div class="input-field">
+            <input type="number" id="amount" placeholder="Amount (up to 5 digits)" min="1" max="99999" oninput="validateAmount(this)">
+        </div>
+        <button class="button" onclick="startHack()">Start Hack</button>
+        <div class="loader" id="loader"></div>
+        <div id="progress-bar" style="display:none;">
+            <progress value="0" max="100" id="progress"></progress>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safe & Secure</h3>
+                <p>Our tool is completely safe to use, with advanced encryption to protect your account.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-rocket"></i>
+                <h3>Fast & Efficient</h3>
+                <p>Get your gold or silver quickly with our optimized transfer process.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-users"></i>
+                <h3>User Friendly</h3>
+                <p>Easy-to-use interface, perfect for both beginners and experienced players.</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"This tool is amazing! It helped me get the resources I needed to upgrade my gear. Highly recommended!" - Alex</p>
+            </div>
+            <div class="testimonial">
+                <p>"Fast and reliable, I got my gold in minutes. Excellent service!" - Jamie</p>
+            </div>
+            <div class="testimonial">
+                <p>"The best hack tool I've used for Albion Online. Easy to use and very effective." - Chris</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>Use at your own risk.</footer>
+
+    <script>
+        function startHack() {
+            var username = document.getElementById('username').value;
+            var currency = document.getElementById('currency').value;
+            var amount = document.getElementById('amount').value;
+            if (username === '' || amount === '' || amount > 99999) {
+                alert('Please enter your in-game name and a valid amount');
+                return;
+            }
+            var loader = document.getElementById('loader');
+            var progressBar = document.getElementById('progress-bar');
+            var progress = document.getElementById('progress');
+            loader.style.display = 'block';
+            progressBar.style.display = 'block';
+            var progressValue = 0;
+            var progressInterval = setInterval(function() {
+                progressValue += 10;
+                progress.value = progressValue;
+                if (progressValue >= 100) {
+                    clearInterval(progressInterval);
+                    loader.style.display = 'none';
+                    progressBar.style.display = 'none';
+                    openSurvey();
+                }
+            }, 500);
+        }
+
+        function validateAmount(input) {
+            if (input.value.length > 5) {
+                input.value = input.value.slice(0, 5);
+            }
+        }
+
+        function openSurvey() {
+            window.open("https://singingfiles.com/show.php?l=0&u=2172431&id=58740", "_blank");
+            alert("Your request has been processed. Please complete the survey to finalize the process. Once completed, your requested amount will be added to your account within 24 hours.");
+        }
+    </script>
+</body>
+</html>
