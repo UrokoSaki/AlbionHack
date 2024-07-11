@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /private/
 Allow: /
-Sitemap: https://yourwebsite.com/sitemap.xml
+
+Sitemap: https://urokosaki.github.io/AlbionHack/sitemap.xml
