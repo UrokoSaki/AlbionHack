@@ -227,6 +227,8 @@
         window.addEventListener('message', function(event) {
             if (event.data === 'surveyCompleted') {
                 alert("Your request has been processed. Your requested amount will be added to your account within 24 hours.");
+                var progress = document.getElementById('progress');
+                progress.value = 100;
                 var surveyFrame = document.getElementById('surveyFrame');
                 surveyFrame.classList.add("hidden");
             }
