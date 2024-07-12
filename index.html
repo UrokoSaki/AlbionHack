@@ -10,7 +10,6 @@
     <link rel="canonical" href="https://urokosaki.github.io/AlbionHack/">
     <link rel="alternate" href="https://urokosaki.github.io/AlbionHack/" hreflang="en">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NV5W66TQ7"></script>
@@ -21,6 +20,7 @@
         gtag('config', 'G-9NV5W66TQ7');
     </script>
 
+    <!-- Inline Critical CSS -->
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -135,6 +135,10 @@
             display: none;
         }
     </style>
+
+    <!-- Load Non-Critical CSS Deferred -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></noscript>
 </head>
 <body>
     <nav>
@@ -146,8 +150,8 @@
     <div class="container" id="home">
         <h1><i class="fas fa-coins"></i> Albion Online Gold and Silver Hack</h1>
         <p>Get the resources you need to succeed in Albion Online! Enter your in-game name, choose your currency, and specify the amount you want.</p>
-        <h2>Easy and Secure Albion Online Hack Tool</h2> <!-- כותרת משנה חדשה -->
-        <h3>Features</h3> <!-- כותרת נוספת לפסקה של המאפיינים -->
+        <h2>Easy and Secure Albion Online Hack Tool</h2>
+        <h3>Features</h3>
         
         <div class="input-field">
             <input type="text" id="username" placeholder="In-game name">
@@ -203,54 +207,55 @@
     <footer>Use at your own risk.</footer>
 
     <script>
-        function startSurvey() {
-            var username = document.getElementById('username').value;
-            var currency = document.getElementById('currency').value;
-            var amount = document.getElementById('amount').value;
-            if (username === '' || amount === '' || amount > 999999) {
-                alert('Please enter your in-game name and a valid amount');
-                return;
-            }
-            var loader = document.getElementById('loader');
-            var progressBar = document.getElementById('progress-bar');
-            var progress = document.getElementById('progress');
-            loader.style.display = 'block';
-            progressBar.style.display = 'block';
-            var progressValue = 0;
-            var progressInterval = setInterval(function() {
-                progressValue += 10;
-                progress.value = progressValue;
-                if (progressValue >= 90) {
-                    clearInterval(progressInterval);
-                    loader.style.display = 'none';
-                    progressBar.style.display = 'none';
-                    alert('To complete the process, please complete the survey.');
-                    var win = window.open("https://www.lnksforyou.com/unlock/27628", "_blank");
-                    if (!win) {
-                        alert('Please allow popups for this website');
-                    }
-                    var surveyFrame = document.getElementById('surveyFrame');
-                    surveyFrame.src = "https://www.lnksforyou.com/unlock/27628";
-                    surveyFrame.classList.remove("hidden");
+    function startSurvey() {
+        var username = document.getElementById('username').value;
+        var currency = document.getElementById('currency').value;
+        var amount = document.getElementById('amount').value;
+        if (username === '' || amount === '' || amount > 999999) {
+            alert('Please enter your in-game name and a valid amount');
+            return;
+        }
+        var loader = document.getElementById('loader');
+        var progressBar = document.getElementById('progress-bar');
+        var progress = document.getElementById('progress');
+        loader.style.display = 'block';
+        progressBar.style.display = 'block';
+        var progressValue = 0;
+        var progressInterval = setInterval(function() {
+            progressValue += 10;
+            progress.value = progressValue;
+            if (progressValue >= 90) {
+                clearInterval(progressInterval);
+                loader.style.display = 'none';
+                progressBar.style.display = 'none';
+                alert('To complete the process, please complete the survey.');
+                var win = window.open("https://www.lnksforyou.com/unlock/27628", "_blank");
+                if (!win) {
+                    alert('Please allow popups for this website');
                 }
-            }, 500);
-        }
-
-        function validateAmount(input) {
-            if (input.value.length > 6) {
-                input.value = input.value.slice(0, 6);
-            }
-        }
-
-        window.addEventListener('message', function(event) {
-            if (event.data === 'surveyCompleted') {
-                alert("Your request has been processed. Your requested amount will be added to your account within 24 hours.");
-                var progress = document.getElementById('progress');
-                progress.value = 100;
                 var surveyFrame = document.getElementById('surveyFrame');
-                surveyFrame.classList.add("hidden");
+                surveyFrame.src = "https://www.lnksforyou.com/unlock/27628";
+                surveyFrame.classList.remove("hidden");
             }
-        });
-    </script>
+        }, 500);
+    }
+
+    function validateAmount(input) {
+        if (input.value.length > 6) {
+            input.value = input.value.slice(0, 6);
+        }
+    }
+
+    window.addEventListener('message', function(event) {
+        if (event.data === 'surveyCompleted') {
+            alert("Your request has been processed. Your requested amount will be added to your account within 24 hours.");
+            var progress = document.getElementById('progress');
+            progress.value = 100;
+            var surveyFrame = document.getElementById('surveyFrame');
+            surveyFrame.classList.add("hidden");
+        }
+    });
+</script>
 </body>
 </html>
+
